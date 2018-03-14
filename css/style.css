@@ -1,0 +1,111 @@
+* { padding: 0px; margin: 0px; box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+html { font-size: 17px; }
+a { text-decoration: none; }
+
+@font-face {
+    font-family: 'aileron-light';
+    src: url("../fonts/aileron_light.eot");
+    src: url("../fonts/aileron_light.eot?#iefix") format("embedded-opentype"), url("../fonts/aileron_light.woff") format("woff"), url("../fonts/aileron_light.ttf") format("truetype"), url("../fonts/aileron_light.svg#aileron-light") format("svg");
+}
+@font-face {
+    font-family: 'aileron-regular';
+    src: url("../fonts/aileron_regular.eot");
+    src: url("../fonts/aileron_regular.eot?#iefix") format("embedded-opentype"), url("../fonts/aileron_regular.woff") format("woff"), url("../fonts/aileron_regular.ttf") format("truetype"), url("../fonts/aileron_regular.svg#aileron-regular") format("svg");
+  }
+@font-face {
+    font-family: 'aileron-semibold';
+    src: url("../fonts/aileron_semibold.eot");
+    src: url("../fonts/aileron_semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/aileron_semibold.woff") format("woff"), url("../fonts/aileron_semibold.ttf") format("truetype"), url("../fonts/aileron_semibold.svg#aileron-semibold") format("svg");
+  }
+@font-face {
+    font-family: 'aileron-bold';
+    src: url("../fonts/aileron_bold.eot");
+    src: url("../fonts/aileron_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/aileron_bold.woff") format("woff"), url("../fonts/aileron_bold.ttf") format("truetype"), url("../fonts/aileron_bold.svg#aileron-bold") format("svg");
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'aileron-regular', Arial, sans-serif; font-weight: normal;  }
+p,a { font-family: 'aileron-light', Arial, sans-serif; }
+.text-center { text-align: center; }
+.fr{float:right;}
+.mtb-40 { margin: 2rem 0; }
+.brand-txt-color { color: #009bdf; }
+.align-center{text-align:center;}
+#userAgent { margin: 1rem 0; }
+a.download-link { margin: 1rem 0; display: inline-block; background: #009bdf; color: #fff; border-radius: 0.3rem; padding: 0.5rem 2rem; }
+#steps{background:#fff; padding:1rem;font-size:13px;font-family: 'aileron-light', Arial, sans-serif;}
+#steps p{margin-bottom:0.5rem;}
+#steps ol { list-style-position: inside; padding-left:1rem}
+#steps ol li { margin-bottom: 0.3rem;}
+body {background: #f1f1f1;font-family: 'aileron-light', Arial, sans-serif;}
+		.congrats {font-size:17px; text-align:center;font-family: 'aileron-regular', Arial, sans-serif;margin:1rem 0}
+		.installation-steps{font-size: 20px;
+    font-family: 'aileron-light', Arial, sans-serif;
+    padding: 1rem;}
+		.step {background: #fff;border: 1px #ccc solid;border-radius: 10px;padding: 4px 10px;margin: 10px 0;float:left;width:98%;margin:0 1%;}
+		.instructions {font-size: 10pt;padding-top:0.25rem}
+		.arrow {font-size: 15pt; padding-right:0.5rem; padding-top:0.4rem}
+		table {width: 100%;}
+		.prsIcon{float:left;margin-bottom:10px;width:100%}
+		.fl{float:left}
+		.prsIconspan{margin-top: -12px;float: left;margin-left: 5px;}
+		.width100per{width:100%}
+		.height-40{height:40px;}
+		.platforms{padding-top:3rem;float:left; width:100%}
+		.platforms > div{ float:left; text-align:center; width:50%; font-size:14px; font-family:'aileron-light', Arial, sans-serif;}
+		.platforms p{padding-bottom:1rem}
+		.platform-android,.platform-ios{padding:0.5rem; background:#009bdf; display:inline-block;color:#fff;width:5rem}
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+}
+.congrats-android{font-size:16px;margin:4rem 0; text-decoration:underline; text-align:center}
+.color-loading-image {
+    width: 2rem;
+    height: 2rem;
+    /* position: absolute; */
+    margin: 0 auto;
+    bottom: 1.5rem;
+    background: url(../img/color-loader.png) no-repeat center;
+    animation: loader 1s linear infinite;
+    background-size: contain;
+    display: inline-block;
+}
+.font-size-20{font-size:1rem}
+.fontFamilyRegular{font-family: 'aileron-regular';}
+@-webkit-keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-moz-keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-ms-keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-o-keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+@media (max-width: 768px) {
+    html { font-size: 16px;}
+ }
