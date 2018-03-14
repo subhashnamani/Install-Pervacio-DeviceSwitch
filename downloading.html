@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Install Pervacio DeviceSwitch</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script>
+		function setTimeOut(){
+				setTimeout(function () { 
+                window.location = 'installation-steps.html'; }, 5000)
+		}
+        function showDownloadLink() {
+			var userAgent = navigator.userAgent,
+			//browser = /Edge\/\d+/.test(userAgent) ? 'ed' : /MSIE 9/.test(userAgent) ? 'ie9' : /MSIE 10/.test(userAgent) ? 'ie10' : /MSIE 11/.test(userAgent) ? 'ie11' : /MSIE\s\d/.test(userAgent) ? 'ie?' : /rv\:11/.test(userAgent) ? 'ie11' : /Firefox\W\d/.test(userAgent) ? 'ff' : /Chrom(e|ium)\W\d|CriOS\W\d/.test(userAgent) ? 'gc' : /\bSafari\W\d/.test(userAgent) ? 'sa' : /\bOpera\W\d/.test(userAgent) ? 'op' : /\bOPR\W\d/i.test(userAgent) ? 'op' : typeof MSPointerEvent !== 'undefined' ? 'ie?' : '',
+			mobile = /IEMobile|Windows Phone|Lumia/i.test(userAgent) ? 'w' : /iPhone|iP[oa]d/.test(userAgent) ? 'i' : /Android/.test(userAgent) ? 'a' : /BlackBerry|PlayBook|BB10/.test(userAgent) ? 'b' : /Mobile Safari/.test(userAgent) ? 's' : /webOS|Mobile|Tablet|Opera Mini|\bCrMo\/|Opera Mobi/i.test(userAgent) ? 1 : 0;
+			//if(mobile == "a" || mobile == "b"){}
+			//else if(mobile == "i"){}
+			//else{}
+			alert(userAgent);
+			if(mobile == "a" || mobile == "b"){
+			//if(userAgent.includes("Andriod") || userAgent.includes("Chrome")){
+                alert("Android");
+				document.getElementById("Android").style.display = "block";
+                window.location = 'https://pervaciostorage.s3.amazonaws.com/WDPervacio/PervacioQA/wds.apk';  
+				//window.location = 'https://pervaciostorage.s3.amazonaws.com/WDPervacio/Bell/wds.apk';				
+				setTimeOut();
+			}
+			else if(mobile == 'i'){
+			//else if(userAgent.includes("IOS") || userAgent.includes("iPhone") || userAgent.includes("Firefox")){
+                alert("IOS");
+				document.getElementById("IOS").style.display = "block";
+				//window.location.href = "itms-services://?action=download-manifest;url=https://pervaciostorage.s3.amazonaws.com/WDPervacio/PervacioQA/wddaig.plist";
+				window.location.href = "itms-services://?action=download-manifest;url=https://pervaciostorage.s3.amazonaws.com/WDPervacio/Bell/wddaig.plist";
+                setTimeOut();      
+			}
+			else{
+				alert("Select Device");
+				document.getElementById("Other").style.display = "block";
+			}
+		}
+    </script>
+</head>
+<body onload="showDownloadLink();">
+<!-- Android Code Start  -->
+    <div class="container text-center" style="display:none" id="Android">
+        <div class="congrats-android">Welcome to DeviceSwitch</div>
+        <p class="mtb-40 brand-txt-color font-size-20 fontFamilyRegular">Downloading App in progress <br> Please wait...</p>
+        <div class="color-loading-image"></div>
+    </div> 
+<!-- Android Code End -->
+
+<!-- IOS Code Start  -->	
+	<div class="container text-center" style="display:none" id="IOS">
+        <div class="congrats-android">Welcome to DeviceSwitch</div>
+        <p class="mtb-40 brand-txt-color font-size-20 fontFamilyRegular">Downloading App in progress <br> Please wait...</p>
+        <div class="color-loading-image"></div>
+    </div>
+<!-- IOS Code End -->
+<!-- Other Start -->
+	<div class="container" style="display:none" id="Other">
+         <div class="installation-steps align-center">What is your device type?</div>
+		 <div class="platforms">
+			<div>
+				<p><img src="./img/ic_android.png" width="50" /></p>
+				<p><span class="platform-android" onclick="showDownloadLink();">ANDROID</span></p>
+			</div>
+			<div>
+				<p><img src="./img/ic_ios.png" width="50" /></p>
+				<p><span class="platform-ios" onclick="showDownloadLink();">IOS</span></p>
+			</div>
+		 </div>
+	</div>
+<!-- Other End -->
+</body>
+</html>

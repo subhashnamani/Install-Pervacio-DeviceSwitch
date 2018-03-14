@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Install Pervacio DeviceSwitch</title>
+      <link rel="stylesheet" href="css/style.css"/>
+      <script>
+         function enableBtn() {
+			 var userAgent = navigator.userAgent,
+			browser = /Edge\/\d+/.test(userAgent) ? 'ed' : /MSIE 9/.test(userAgent) ? 'ie9' : /MSIE 10/.test(userAgent) ? 'ie10' : /MSIE 11/.test(userAgent) ? 'ie11' : /MSIE\s\d/.test(userAgent) ? 'ie?' : /rv\:11/.test(userAgent) ? 'ie11' : /Firefox\W\d/.test(userAgent) ? 'ff' : /Chrom(e|ium)\W\d|CriOS\W\d/.test(userAgent) ? 'gc' : /\bSafari\W\d/.test(userAgent) ? 'sa' : /\bOpera\W\d/.test(userAgent) ? 'op' : /\bOPR\W\d/i.test(userAgent) ? 'op' : typeof MSPointerEvent !== 'undefined' ? 'ie?' : '',
+			mobile = /IEMobile|Windows Phone|Lumia/i.test(userAgent) ? 'w' : /iPhone|iP[oa]d/.test(userAgent) ? 'i' : /Android/.test(userAgent) ? 'a' : /BlackBerry|PlayBook|BB10/.test(userAgent) ? 'b' : /Mobile Safari/.test(userAgent) ? 's' : /webOS|Mobile|Tablet|Opera Mini|\bCrMo\/|Opera Mobi/i.test(userAgent) ? 1 : 0;
+			 if(mobile == "a" || mobile == "b" || browser == "gc"){
+			 //if(userAgent.includes("Andriod") || userAgent.includes("Chrome")){
+				 document.getElementById("Android").style.display = "block";
+				 setTimeout(function(){
+					 var element = document.getElementById("link");
+					 element.classList.remove("isDisabled");
+				 },5000)
+			 }
+			 else{
+			 document.getElementById("IOS").style.display = "block";
+			 }
+         }
+      </script>
+   </head>
+   <body onload="enableBtn();">
+      <div class="container" style="display:none" id="Android">
+         <div class="installation-steps">How to install</div>
+         <div id="steps">
+		 <p>Please follow below instructions:</p>
+            <ol>
+               <li>Open the downloaded app (by clicking on Open button or by Clicking on the wds.apk download completed in Notification)</li>
+               <li>Click on Settings</li>
+               <li>Allow apps from Unknown Sources to be installed</li>
+               <li>Click on OK</li>
+               <li>Back button will User navigate you to the app permissions page.</li>
+               <li>Please click on wds.apk present in Downloads under File Explorer or in the downloads section for google powered devices you do not land in permissions</li>
+               <li>Click on Install</li>
+               <li>Click on "Open" to Launch the Content Transfer Application.</li>
+            </ol>
+         </div>
+      </div>
+     <div class="container" style="display:none" id="IOS">
+         <div class="installation-steps">How to install</div>
+         <div id="steps">
+			<p>Please follow below instructions:</p>
+            <ol>
+               <li>Click on Install </li>
+               <li>Wait till app is completely downloaded on the home screen </li>
+               <li>Go to Settings of Device, Select General-> Device Management -> Pervacio,Inc -> Click on "Trust "Pervacio,Inc"".</li>
+               <li>Click on Trust</li>
+               <li>Go to Home screen and click on Content Transfer icon to Launch the Application</li>
+            </ol>
+         </div>
+      </div>
+   </body>
+</html>
